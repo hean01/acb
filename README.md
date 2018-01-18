@@ -60,14 +60,14 @@ the board which is used by the Linux kernel driver to detect which
 type of board to instantiate. You can provide module parameters when
 loading the Linux kernel module driver to specify which address and
 gpio pin to use for each board types. Read section
-[Using the Linux kernel module](#Using-the-Linux-kernel-module) for more details how to use the
+[Using the Linux kernel module](#using-the-linux-kernel-module) for more details how to use the
 module.
 
 The image below shows how to build one using strip board, it is also
 marked up of which I/O pin that is mapped to input device event by the
 driver for reference when hooking up the board with your hardware.
 
-![alt text](arcade_controller_board.png "Arcade controller board")
+![Arcade controller board layout](doc/arcade_controller_board.png)
 
 The result of a built _arcade controller board_ of above layout looks
 like the following image. However you could with some ease actually
@@ -75,7 +75,7 @@ build three copies of the board into a hat design to sit on top of a
 Raspberry Pi. Its a matter of taste really, however I will not provide
 any hardware specific designs in this project.
 
-![alt text](arcade_controller_board_build.png "Built version of the board")
+![Built version of the board](doc/arcade_controller_board_build.png)
 
 As the built example above, you will see that this is very
 minimalistic and clean build, anyone could do it.
@@ -94,8 +94,8 @@ controllers, first one is Player 1 setup, the left side of cabinet and
 the second if for Player 2, right side. This is just for ideas and
 reference, use any layout that fits your needs.
 
-![alt text](sega1_l.png "Player 1 layout")
-![alt text](sega2_l.png "Player 2 layout")
+![Player 1 layout panel layout](doc/sega1_l.png)
+![Player 2 layout panel layout](doc/sega2_l.png)
 
 
 ### Hook up with Raspberry Pi 3
@@ -138,7 +138,7 @@ If you want to use other addresses or gpio pins, you can change this
 using module parameters. This is needed for other hardware platforms
 that is not Raspberry Pi 3 compatilble. Read more about how to do this
 in section
-[Using the Linux kernel module](#Using-the-Linux-kernel-module).
+[Using the Linux kernel module](#using-the-linux-kernel-module).
 
 
 ## Using the Linux kernel module
@@ -153,7 +153,7 @@ As you noticed the above command describes each board with type and
 which I2C addresses and gpio pin numbers to be used. Those values
 above is the default and can be left out if you are using Raspberry Pi
 and hooking up the boards as described in section
-[Hook up with Raspberry Pi 3](#Hook-up-with-Raspberry-Pi-3).
+[Hook up with Raspberry Pi 3](#hook-up-with-raspberry-pi-3).
 
 
 ### Building the driver
