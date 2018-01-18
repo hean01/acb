@@ -1,15 +1,15 @@
 # Arcade controller board
 
 This project consist of schematics and a linux kernel driver module
-for a controller board used for bulding an Arcade machine. The board
+for a controller board used for building an Arcade machine. The board
 is easily build on a strip-board with minimal components and costs.
 
 The requirement for using the _arcade controller board_ is that you
 have an hardware platform with 5V, I2C bus to chain your board on and
 a gpio pin available for each board you hook up, used for interrupt
 driven input. With other words, a normal computer is not working and
-you need to look into hardware of the Raspberry Pi era that fullfills
-those hardware requirements.
+you need to look into hardware of the Raspberry Pi era that meets
+specified hardware requirements.
 
 Three boards are needed for a two player setup cabinet and two boards
 for a single player configuration. The design of the _arcade
@@ -28,7 +28,7 @@ and specifying a type is just a matter of a software configuration.
 The differences are that the _player_ controller board will provide 16
 individual inputs for the player this is more than enough for game
 play of most arcade and consoles. The _auxiliary_ controller board
-will provide additional 8 indiviual inputs used for generic input for
+will provide additional 8 individual inputs used for generic input for
 example special emulator commands etc. and 8 generic outputs which you
 can use for steering hardware in your cabinet build.
 
@@ -60,8 +60,8 @@ the board which is used by the Linux kernel driver to detect which
 type of board to instantiate. You can provide module parameters when
 loading the Linux kernel module driver to specify which address and
 gpio pin to use for each board types. Read section
-[Using the Linux kernel module](#using-the-linux-kernel-module) for more details how to use the
-module.
+[Using the Linux kernel module](#using-the-linux-kernel-module) for
+more details how to use the module.
 
 The image below shows how to build one using strip board, it is also
 marked up of which I/O pin that is mapped to input device event by the
