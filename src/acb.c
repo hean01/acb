@@ -132,8 +132,8 @@ acb_threaded_irq_handler(int irq, void *opaque)
 
   /* read INTCAPA/B and update gpio data, only read porta on auxiliary
      boards, this read clears the interrupt */
-  a = i2c_smbus_read_byte_data(dev->client, INTCAPA);
-  b = i2c_smbus_read_byte_data(dev->client, INTCAPB);
+  a = i2c_smbus_read_byte_data(dev->client, GPIOA);
+  b = i2c_smbus_read_byte_data(dev->client, GPIOB);
 
   dev->port = ((unsigned short)a << 8) & 0xff00;
   if (dev->id->driver_data != AuxiliaryController)
